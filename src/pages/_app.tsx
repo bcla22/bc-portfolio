@@ -1,4 +1,4 @@
-import { AnimatePresence, motion } from 'framer-motion';
+import { AnimatePresence, Variants, motion } from 'framer-motion';
 import type { AppProps } from 'next/app';
 import { useRouter } from 'next/router';
 import { PAGE_TRANSITIONS } from '../config';
