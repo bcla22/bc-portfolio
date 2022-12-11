@@ -1,6 +1,6 @@
 # BC Portfolio Website
 
-This project contains the Next.js project running my portfolio site at [benclausi.com](https://benclausi.com).  It's UI is built on top of TailwindCSS and uses Framer Motion for page transitions.  
+This project contains the Next.js project running my portfolio site at [benclausi.com](https://benclausi.com).  The UI is built on top of TailwindCSS and uses Framer Motion for page transitions.  
 
 ## Requirements 
 
