@@ -15,8 +15,8 @@ const Home: NextPage = () => {
       <CenteredContainer>
         <div className="mx-5 lg:mx-0">
           <h1 className="text-6xl lg:text-8xl font-medium mb-6 text-slate-900">Ben Clausi</h1>
-          <div className="flex items-center mb-12">
-            <p className="text-2xl font-light text-slate-600 mr-4">Full-Stack Software Engineer</p>
+          <div className="flex flex-col items-start lg:flex-row lg:items-center mb-12">
+            <p className="text-2xl font-light text-slate-600 mr-4 mb-3 lg:mb-0">Full-Stack Software Engineer</p>
             <Image src={canada_flag.src} height={20} width={40} alt="Canadian Flag" />
           </div>
           <div className="space-x-2">
