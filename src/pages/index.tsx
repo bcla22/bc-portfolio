@@ -8,7 +8,10 @@ import PageLayout from '../components/PageLayout';
 
 const Home: NextPage = () => {
   return (
-    <PageLayout title="Ben Clausi - Full-Stack Software Engineer">
+    <PageLayout
+      title="Ben Clausi - Full-Stack Software Engineer"
+      description="I am a Full-Stack Software Engineer based in Canada."
+    >
       <CenteredContainer>
         <div className="mx-5 lg:mx-0">
           <h1 className="text-6xl lg:text-8xl font-medium mb-6 text-slate-900">Ben Clausi</h1>
