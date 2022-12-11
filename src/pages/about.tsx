@@ -28,7 +28,7 @@ const About: NextPage = () => {
             <ParagraphText>
               I&apos;ve worked with a variety of server-side frameworks in both Node.js and Python
               including Express, Koa and Flask, and have extensive experience building data-driven
-              UIs in React.
+              UIs in React using Next.js and CRA.
             </ParagraphText>
             <ParagraphText>
               I&apos;ve implemented datastores using PostgreSQL, MySQL and Redis, and built
