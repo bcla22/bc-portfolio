@@ -1,12 +1,14 @@
 import type { NextPage } from 'next';
 import Link from 'next/link';
 import dynamic from 'next/dynamic';
+import { motion } from 'framer-motion';
 
 import CenteredContainer from '../components/CenteredContainer';
 import LinkText from '../components/LinkText';
 import PageLayout from '../components/PageLayout';
 import ParagraphText from '../components/ParagraphText';
 import ContactForm from '../components/ContactForm';
+import { CONTAINER_VARIANTS, ITEM_VARIANTS } from '../config';
 
 const InnerPageHeader = dynamic(() => import('../components/InnerPageHeader'), { ssr: false });
 
@@ -16,8 +18,12 @@ const Contact: NextPage = () => {
       <CenteredContainer>
         <div className="mx-5 lg:mx-0">
           <InnerPageHeader backHref="/">Get In Touch</InnerPageHeader>
-          <div className="lg:max-w-3xl">
-            <p className="text-2xl font-light text-slate-600 mr-4 mb-4"></p>
+          <motion.div
+            className="lg:max-w-3xl"
+            variants={CONTAINER_VARIANTS}
+            initial="hidden"
+            animate="show"
+          >
             <ParagraphText emphasis>
               Looking to get in contact? Send me a message using the form below.
             </ParagraphText>
@@ -25,7 +31,7 @@ const Contact: NextPage = () => {
               I&apos;ll try to get back to you within 24 hours during normal business days.
             </ParagraphText>
             <ContactForm />
-          </div>
+          </motion.div>
         </div>
       </CenteredContainer>
     </PageLayout>

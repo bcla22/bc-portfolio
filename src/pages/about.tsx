@@ -1,11 +1,13 @@
 import type { NextPage } from 'next';
 import Link from 'next/link';
 import dynamic from 'next/dynamic';
+import { motion } from 'framer-motion';
 
 import CenteredContainer from '../components/CenteredContainer';
 import LinkText from '../components/LinkText';
 import PageLayout from '../components/PageLayout';
 import ParagraphText from '../components/ParagraphText';
+import { CONTAINER_VARIANTS, ITEM_VARIANTS } from '../config';
 
 const InnerPageHeader = dynamic(() => import('../components/InnerPageHeader'), { ssr: false });
 
@@ -19,8 +21,12 @@ const About: NextPage = () => {
       <CenteredContainer>
         <div className="mx-5 lg:mx-0">
           <InnerPageHeader backHref="/">About Me</InnerPageHeader>
-          <div className="lg:max-w-3xl">
-            <p className="text-2xl font-light text-slate-600 mr-4 mb-4"></p>
+          <motion.div
+            className="lg:max-w-3xl"
+            variants={CONTAINER_VARIANTS}
+            initial="hidden"
+            animate="show"
+          >
             <ParagraphText emphasis>
               I&apos;m a full-stack software engineer with 6 years of experience developing both
               frontend and backend systems.
@@ -35,11 +41,11 @@ const About: NextPage = () => {
               distributed message queues around Redis Pub/Sub and RabbitMQ. I&apos;m a huge fan of
               Typescript and Docker, and use both wherever I can.
             </ParagraphText>
-            <div className="flex space-x-6 mt-8">
+            <motion.div variants={ITEM_VARIANTS} className="flex space-x-6 mt-8">
               <LinkText href="https://github.com/bcla22">My Github</LinkText>
               <LinkText href="/contact">Contact Me Directly</LinkText>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
         </div>
       </CenteredContainer>
     </PageLayout>
